@@ -3,6 +3,7 @@ import { AuthProvider, useAuth } from './components/AuthProvider';
 import { Login } from './components/Login';
 import { Signup } from './components/Signup';
 import { Sidebar } from './components/Sidebar';
+import { HamburgerButton } from './components/HamburgerButton';
 import { Dashboard } from './components/Dashboard';
 import { Inventory } from './components/Inventory';
 import { Customers } from './components/Customers';
@@ -18,6 +19,7 @@ const MainApp: React.FC = () => {
   const [currentTab, setCurrentTab] = useState('dashboard');
   const [loading, setLoading] = useState(true);
   const [showSignup, setShowSignup] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   // Centralized State (now fetched from Supabase)
   const [customers, setCustomers] = useState<Customer[]>([]);
@@ -98,8 +100,18 @@ const MainApp: React.FC = () => {
 
   return (
     <div className="flex min-h-screen bg-gray-50">
-      <Sidebar currentTab={currentTab} setCurrentTab={setCurrentTab} userName={user.name || user.email} />
-      <main className="flex-1 ml-64">
+      <HamburgerButton
+        isOpen={isSidebarOpen}
+        onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+      />
+      <Sidebar
+        currentTab={currentTab}
+        setCurrentTab={setCurrentTab}
+        userName={user.name || user.email}
+        isOpen={isSidebarOpen}
+        onClose={() => setIsSidebarOpen(false)}
+      />
+      <main className="flex-1 md:ml-64">
         {renderContent()}
       </main>
     </div>
