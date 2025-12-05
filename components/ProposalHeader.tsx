@@ -14,7 +14,7 @@ export const ProposalHeader: React.FC<ProposalHeaderProps> = ({ order, customer,
     return (
         <div className="bg-white border-2 border-gray-300 rounded-lg overflow-hidden print:border-black">
             {/* Top Header with Logo and Locations */}
-            <div className="bg-gradient-to-r from-teal-500 to-teal-600 p-4">
+            <div className="bg-gradient-to-r from-[#1a1a1a] via-[#2d2d2d] to-[#00d2b4] p-4">
                 <div className="flex items-center justify-between">
                     {/* Logo Area */}
                     <div className="flex items-center gap-4">
@@ -26,7 +26,7 @@ export const ProposalHeader: React.FC<ProposalHeaderProps> = ({ order, customer,
                     {/* Title */}
                     <div className="flex-1 text-center">
                         <div className="bg-white inline-block px-8 py-2 rounded-full">
-                            <h1 className="text-teal-600 font-bold text-lg tracking-wide">ASSISTÊNCIA TÉCNICA</h1>
+                            <h1 className="text-[#00d2b4] font-bold text-lg tracking-wide">ASSISTÊNCIA TÉCNICA</h1>
                         </div>
                     </div>
 

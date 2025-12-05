@@ -93,7 +93,7 @@ export const Proposals: React.FC<ProposalsProps> = ({ orders, customers, invento
     return (
         <div className="p-8">
             <h2 className="text-3xl font-bold text-gray-800 mb-8 flex items-center gap-3">
-                <FileText className="text-blue-600" />
+                <FileText className="text-[#00d2b4]" />
                 Gerador de Propostas
             </h2>
 
@@ -110,7 +110,7 @@ export const Proposals: React.FC<ProposalsProps> = ({ orders, customers, invento
                             <select
                                 value={formData.customerId}
                                 onChange={(e) => setFormData({ ...formData, customerId: e.target.value })}
-                                className="w-full border rounded-lg p-2 focus:ring-2 focus:ring-blue-500 outline-none"
+                                className="w-full border rounded-lg p-2 focus:ring-2 focus:ring-[#00d2b4] outline-none"
                             >
                                 <option value="">Selecione um cliente</option>
                                 {customers.map(customer => (
@@ -128,7 +128,7 @@ export const Proposals: React.FC<ProposalsProps> = ({ orders, customers, invento
                                 value={formData.deviceModel}
                                 onChange={(e) => setFormData({ ...formData, deviceModel: e.target.value })}
                                 placeholder="Ex: iPhone 13, Samsung S21, etc."
-                                className="w-full border rounded-lg p-2 focus:ring-2 focus:ring-blue-500 outline-none"
+                                className="w-full border rounded-lg p-2 focus:ring-2 focus:ring-[#00d2b4] outline-none"
                             />
                         </div>
 
@@ -139,7 +139,7 @@ export const Proposals: React.FC<ProposalsProps> = ({ orders, customers, invento
                                 onChange={(e) => setFormData({ ...formData, description: e.target.value })}
                                 placeholder="Descreva o problema ou serviço a ser realizado..."
                                 rows={3}
-                                className="w-full border rounded-lg p-2 focus:ring-2 focus:ring-blue-500 outline-none"
+                                className="w-full border rounded-lg p-2 focus:ring-2 focus:ring-[#00d2b4] outline-none"
                             />
                         </div>
 
@@ -148,7 +148,7 @@ export const Proposals: React.FC<ProposalsProps> = ({ orders, customers, invento
                                 <label className="block text-sm font-medium text-gray-700">Peças/Serviços</label>
                                 <button
                                     onClick={addPart}
-                                    className="text-sm text-blue-600 hover:text-blue-700 flex items-center gap-1"
+                                    className="text-sm text-[#00d2b4] hover:text-[#00e5c8] flex items-center gap-1 font-medium"
                                 >
                                     <Plus size={16} /> Adicionar
                                 </button>
@@ -216,10 +216,10 @@ export const Proposals: React.FC<ProposalsProps> = ({ orders, customers, invento
                             />
                         </div>
 
-                        <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                        <div className="bg-[#00d2b4]/10 p-4 rounded-lg border border-[#00d2b4]/30">
                             <div className="flex justify-between items-center">
                                 <span className="font-bold text-gray-700">Valor Total:</span>
-                                <span className="text-2xl font-bold text-blue-600">
+                                <span className="text-2xl font-bold text-[#00d2b4]">
                                     R$ {calculateTotal().toFixed(2)}
                                 </span>
                             </div>
@@ -232,7 +232,7 @@ export const Proposals: React.FC<ProposalsProps> = ({ orders, customers, invento
                         className={'w-full py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-2 transition-all ' +
                             (!formData.customerId || isLoading
                                 ? 'bg-gray-200 text-gray-400 cursor-not-allowed'
-                                : 'bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-lg hover:shadow-xl hover:scale-[1.02]'
+                                : 'bg-gradient-to-r from-[#00d2b4] to-[#00e5c8] text-[#1a1a1a] shadow-lg hover:shadow-xl hover:scale-[1.02]'
                             )}
                     >
                         {isLoading ? (
@@ -254,7 +254,7 @@ export const Proposals: React.FC<ProposalsProps> = ({ orders, customers, invento
                             <div className="flex gap-2">
                                 <button
                                     onClick={copyToClipboard}
-                                    className="text-sm text-blue-600 font-medium hover:bg-blue-100 px-3 py-1 rounded-lg flex items-center gap-1"
+                                    className="text-sm text-[#00d2b4] font-medium hover:bg-[#00d2b4]/10 px-3 py-1 rounded-lg flex items-center gap-1 transition-colors"
                                 >
                                     <Copy size={14} /> Copiar
                                 </button>

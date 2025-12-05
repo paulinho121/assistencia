@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
+
+/* MCI Brand Colors */
+:root {
+    --mci-turquoise: #00D2B4;
+    --mci-turquoise-hover: #00E5C8;
+    --mci-dark: #1A1A1A;
+    --mci-gray-dark: #2D2D2D;
+    --mci-gray-medium: #808080;
+    --mci-gray-light: #F3F4F6;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 @tailwind utilities;

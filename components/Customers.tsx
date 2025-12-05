@@ -45,7 +45,7 @@ export const Customers: React.FC<CustomersProps> = ({ customers, setCustomers })
         <h2 className="text-3xl font-bold text-gray-800">Clientes</h2>
         <button
           onClick={() => setIsModalOpen(true)}
-          className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg flex items-center gap-2 transition-colors"
+          className="bg-[#00d2b4] hover:bg-[#00e5c8] text-[#1a1a1a] font-semibold px-4 py-2 rounded-lg flex items-center gap-2 transition-colors shadow-sm hover:shadow-md"
         >
           <Plus size={18} /> Novo Cliente
         </button>
@@ -56,7 +56,7 @@ export const Customers: React.FC<CustomersProps> = ({ customers, setCustomers })
         <input
           type="text"
           placeholder="Buscar cliente..."
-          className="w-full pl-10 pr-4 py-2 rounded-xl border-gray-200 shadow-sm focus:ring-2 focus:ring-blue-500 outline-none"
+          className="w-full pl-10 pr-4 py-2 rounded-xl border-gray-200 shadow-sm focus:ring-2 focus:ring-[#00d2b4] outline-none"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
@@ -66,7 +66,7 @@ export const Customers: React.FC<CustomersProps> = ({ customers, setCustomers })
         {filtered.map(customer => (
           <div key={customer.id} className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+              <div className="w-10 h-10 rounded-full bg-[#00d2b4]/10 flex items-center justify-center text-[#00d2b4]">
                 <User size={20} />
               </div>
               <div>
@@ -141,7 +141,7 @@ export const Customers: React.FC<CustomersProps> = ({ customers, setCustomers })
               <button
                 onClick={handleSave}
                 disabled={saving}
-                className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="px-4 py-2 bg-[#00d2b4] text-[#1a1a1a] font-semibold rounded-lg hover:bg-[#00e5c8] disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
               >
                 {saving ? 'Salvando...' : 'Salvar'}
               </button>
