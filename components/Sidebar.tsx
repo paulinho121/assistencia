@@ -28,9 +28,9 @@ export const Sidebar: React.FC<SidebarProps> = ({ currentTab, setCurrentTab, use
   return (
     <div className="w-64 bg-[#1a1a1a] text-white min-h-screen flex flex-col fixed left-0 top-0 z-10">
       <div className="p-6 border-b border-gray-800 flex flex-col items-center">
-        <img src="/logo.png" alt="MCI Logo" className="h-12 mb-3" />
+        <img src="/logo.png" alt="Logo" className="h-12 mb-3" />
         <h1 className="text-xl font-bold text-[#00d2b4] text-center">
-          Assistencia Técnica MCI
+          Assistência Técnica
         </h1>
       </div>
 

@@ -19,7 +19,7 @@ export const ProposalHeader: React.FC<ProposalHeaderProps> = ({ order, customer,
                     {/* Logo Area */}
                     <div className="flex items-center gap-4">
                         <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center">
-                            <img src="/logo.png" alt="MCI Logo" className="w-16 h-16 object-contain" />
+                            <img src="/logo.png" alt="Logo" className="w-16 h-16 object-contain" />
                         </div>
                     </div>
 

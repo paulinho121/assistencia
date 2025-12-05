@@ -28,17 +28,17 @@ export const Login: React.FC<LoginProps> = ({ onSwitchToSignup }) => {
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-[#1a1a1a] via-[#2d2d2d] to-[#00d2b4]/20 flex items-center justify-center p-4">
-            <div className="bg-white rounded-2xl shadow-2xl w-full max-w-md p-8">
+            <div className="bg-gradient-to-br from-[#1a1a1a] to-[#2d2d2d] rounded-2xl shadow-2xl w-full max-w-md p-8 border border-gray-700">
                 <div className="text-center mb-8">
                     <div className="mx-auto mb-4 w-32 h-20 flex items-center justify-center">
-                        <img src="/logo.png" alt="MCI Logo" className="h-16 object-contain" />
+                        <img src="/logo.png" alt="Logo" className="h-16 object-contain" />
                     </div>
-                    <h1 className="text-3xl font-bold text-gray-800">Assistência Técnica</h1>
-                    <p className="text-gray-600 mt-2">Faça login para continuar</p>
+                    <h1 className="text-3xl font-bold text-white">Assistência Técnica</h1>
+                    <p className="text-gray-300 mt-2">Faça login para continuar</p>
                 </div>
 
                 {error && (
-                    <div className="bg-red-50 border border-red-200 rounded-lg p-3 mb-4 flex items-center gap-2 text-red-700">
+                    <div className="bg-red-500/10 border border-red-500/50 rounded-lg p-3 mb-4 flex items-center gap-2 text-red-400">
                         <AlertCircle size={18} />
                         <span className="text-sm">{error}</span>
                     </div>
@@ -46,7 +46,7 @@ export const Login: React.FC<LoginProps> = ({ onSwitchToSignup }) => {
 
                 <form onSubmit={handleSubmit} className="space-y-4">
                     <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                        <label className="block text-sm font-medium text-gray-300 mb-2">
                             E-mail
                         </label>
                         <div className="relative">
@@ -56,14 +56,14 @@ export const Login: React.FC<LoginProps> = ({ onSwitchToSignup }) => {
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                                 required
-                                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00d2b4] focus:border-transparent outline-none"
+                                className="w-full pl-10 pr-4 py-2 bg-gray-800 border border-gray-600 text-white rounded-lg focus:ring-2 focus:ring-[#00d2b4] focus:border-transparent outline-none placeholder-gray-500"
                                 placeholder="seu@email.com"
                             />
                         </div>
                     </div>
 
                     <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                        <label className="block text-sm font-medium text-gray-300 mb-2">
                             Senha
                         </label>
                         <div className="relative">
@@ -73,7 +73,7 @@ export const Login: React.FC<LoginProps> = ({ onSwitchToSignup }) => {
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                                 required
-                                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00d2b4] focus:border-transparent outline-none"
+                                className="w-full pl-10 pr-4 py-2 bg-gray-800 border border-gray-600 text-white rounded-lg focus:ring-2 focus:ring-[#00d2b4] focus:border-transparent outline-none placeholder-gray-500"
                                 placeholder="••••••••"
                             />
                         </div>
@@ -89,7 +89,7 @@ export const Login: React.FC<LoginProps> = ({ onSwitchToSignup }) => {
                 </form>
 
                 <div className="mt-6 text-center">
-                    <p className="text-gray-600 text-sm">
+                    <p className="text-gray-400 text-sm">
                         Não tem uma conta?{' '}
                         <button
                             onClick={onSwitchToSignup}
